@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django and Docker: A Comprehensive Guide</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Django and Docker: A Comprehensive Guide</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#features">Key Features</a></li>
+            <li><a href="#docker">Docker and Django</a></li>
+            <li><a href="#setup">Setup</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="intro">
+            <h2>Introduction to Django</h2>
+            <p>Django is a high-level Python web framework that enables rapid development of secure and maintainable websites. Built by experienced developers, Django takes care of much of the hassle of web development, so you can focus on writing your app without needing to reinvent the wheel.</p>
+        </section>
+
+        <section id="features">
+            <h2>Key Features of Django</h2>
+            <ul>
+                <li>ORM (Object-Relational Mapping) for database interactions</li>
+                <li>URL routing system for clean, elegant URL schemes</li>
+                <li>Template engine for flexible HTML rendering</li>
+                <li>Forms framework for handling user input</li>
+                <li>Authentication system for secure user management</li>
+            </ul>
+        </section>
+
+        <section id="docker">
+            <h2>Docker and Django</h2>
+            <p>Docker is a platform for developing, shipping, and running applications in containers. When used with Django, Docker provides several benefits:</p>
+            <ul>
+                <li>Consistent development environments across team members</li>
+                <li>Easy deployment and scaling of Django applications</li>
+                <li>Isolation of the Django app from the host system</li>
+                <li>Simplified management of dependencies and services</li>
+            </ul>
+        </section>
+
+        <section id="setup">
+            <h2>Setting up Django with Docker</h2>
+            <ol>
+                <li>Create a Dockerfile in your Django project root</li>
+                <li>Define the base Python image and install dependencies</li>
+                <li>Copy your Django project files into the container</li>
+                <li>Expose the necessary port (usually 8000 for Django)</li>
+                <li>Set the command to run the Django development server</li>
+            </ol>
+        </section>
+        <h2>Django diagram</h2>
+        <img src="{% static 'images/image_1.png' %}" alt="Django and Docker illustration" class="content-image">
+    </main>
+
+    <footer>
+        <p>Remember, this is just a starting point. Django and Docker have many more features and best practices to explore as you build more complex applications.</p>
+    </footer>
+
+    <button id="toggle-chatbot">Get AI Help</button>
+
+    <div id="chatbot-container">
+        <div id="chatbot-header">
+            <h3>AI Assistant</h3>
+            <button id="close-chatbot">&times;</button>
+        </div>
+        <div id="chatbot-messages"></div>
+        <div id="chatbot-input">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+
+    <script src="{% static 'js/chatbot.js' %}"></script>
+</body>
+</html>
